@@ -1,0 +1,313 @@
+.calculate {
+  position: relative;
+  padding: 0 0 70px;
+  width: 100%;
+  text-align: center;
+}
+.calculate__layout {
+  position: relative;
+  z-index: 1;
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.calculate__title {
+  margin: 0 0 20px;
+  font-size: 30px;
+  line-height: 36px;
+  @include main-font1();
+}
+.calculate__value {
+  font-size: 30px !important;
+  line-height: 36px !important;
+  font-family: 'Libre Franklin', sans-serif !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  width: 100%;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  outline: none;
+  text-align: center;
+}
+.calculate__cost {
+  margin: 0 0 40px;
+}
+.calculate__estimation {
+  font-size: 12px;
+  line-height: 13px;
+  text-transform: uppercase;
+
+  div {
+    border-bottom: 1px solid #dddddd;
+    padding: 23px 0 28px;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    >span {
+      display: block;
+      font-size: 24px;
+      line-height: 34px;
+      @include main-font4();
+    }
+
+  }
+
+}
+.calculate__cost-head {
+  margin: 0 0 40px;
+}
+.calculate__range {
+  position: relative;
+  padding-bottom: 50px;
+  margin: 0 0 39px;
+}
+.calculate__range-slider {
+  width: 100%;
+  height: 12px;
+  background: #eeeeee;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  .noUi-connect {
+    background: #e09f38;
+    border: none;
+    box-shadow: none;
+  }
+  .noUi-handle {
+    top: -8px;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 0 0 15px 3px rgba(0,0,0,0.1);
+
+    &:before {
+      display: none;
+    }
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      margin: -3px 0 0 -3px;
+      border-radius: 100%;
+      background: #e09f38;
+      content: '';
+    }
+
+  }
+
+}
+.calculate__range-value {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: left;
+
+  span {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    @include main-font4();
+  }
+
+  &.calculate__range-value_max {
+    left: auto;
+    right: 0;
+    text-align: right;
+  }
+
+}
+.calculate__loading {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.9);
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    border-radius: 100%;
+    background: transparent;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid #e09f38;
+    border-left: 5px solid #e09f38;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #e09f38;
+    border-bottom: 5px solid #e09f38;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    content: '';
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
+
+@-webkit-keyframes spin {
+  0%{
+    -webkit-transform:rotate(0deg);
+  }
+  100%{
+    -webkit-transform:rotate(360deg);
+  }
+}
+@keyframes spin {
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+@media (min-width: $desktop) {
+
+  .calculate {
+    padding: 33px 0 77px;
+    text-align: left;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 300px;
+      height: 160px;
+      margin: -113px 0 0;
+      background: url("../img/calculate.jpg") no-repeat top right;
+      background-size: contain;
+      content: '';
+    }
+
+  }
+  .calculate__layout {
+
+
+
+  }
+  .calculate__efficiency {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+    padding-right: 301px;
+
+    >div {
+      width: 23%;
+
+      &:first-child {
+        width: 65.5%;
+        text-align: left;
+      }
+
+    }
+  }
+  .calculate__cost-head {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+    margin: 0 0 32px;
+
+    >div {
+      width: 31%;
+      text-align: right;
+
+      &:first-child {
+        width: 68%;
+        text-align: left;
+      }
+
+    }
+
+  }
+  .calculate__title {
+    margin: 0;
+  }
+  .calculate__value {
+    text-align: right;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .calculate {
+
+    &:after {
+      top: 27px;
+      width: 400px;
+      height: 238px;
+      margin: 0;
+    }
+
+  }
+  .calculate__efficiency {
+
+    >div {
+      width: 19.6%;
+
+      &:first-child {
+        width: 65.5%;
+      }
+
+    }
+  }
+
+}
+@media (min-width: $desktop-hd) {
+
+  .calculate {
+
+    &:after {
+      top: -7px;
+      width: 538px;
+      height: 360px;
+      margin: 0;
+    }
+
+  }
+
+}
+@media (min-width: $desktop-hd2) {
+
+  .calculate {
+
+    &:after {
+      top: -62px;
+      width: 638px;
+      height: 360px;
+      margin: 0;
+    }
+
+  }
+
+}
+
+

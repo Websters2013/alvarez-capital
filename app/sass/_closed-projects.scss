@@ -1,0 +1,162 @@
+.closed-projects {
+  position: relative;
+  padding: 0 0 70px;
+  width: 100%;
+}
+.closed-projects__layout {
+  position: relative;
+  z-index: 1;
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.closed-projects__set {
+
+}
+.closed-projects__item {
+  display: inline-block;
+  padding: 30px;
+  margin: 0 0 29px;
+  border: 1px solid #dedede;
+  font-size: 15px;
+  line-height: 26px;
+  color: #29251e;
+  -webkit-transition: box-shadow .3s ease, opacity 0.3s ease, transform 0.3s ease;
+  transition: box-shadow .3s ease, opacity 0.3s ease, transform 0.3s ease;
+
+  &.hidden {
+    opacity: 0;
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+  }
+
+}
+.closed-projects__title {
+  margin: 0 0 15px;
+  font-size: 24px;
+  line-height: 30px;
+  @include main-font1();
+
+  span {
+    @include main-font4();
+  }
+
+}
+.closed-projects__data {
+  margin: 0 0 50px;
+  @include main-font2();
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  div {
+    padding: 15px 0;
+    border-bottom: 1px solid #dddddd;
+
+    span {
+      display: block;
+      font-size: 18px;
+      line-height: 22px;
+      @include main-font4();
+      text-transform: none;
+    }
+
+  }
+
+}
+.closed-projects__pic {
+  max-width: 510px;
+  margin: 0 auto 35px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+}
+.closed-projects__add {
+  padding: 28px 0 0;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 4px;
+    @include main-font4();
+    color: #29251e;
+    font-size: 18px;
+    line-height: 20px;
+    border-bottom: 2px solid #e09f38;
+    -webkit-transition: border-bottom .3s ease;
+    transition: border-bottom .3s ease;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .closed-projects {
+    padding: 117px 0 115px;
+  }
+  .closed-projects__item {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+    padding: 52px 59px;
+
+    >div {
+      width: 48.6%;
+      padding-top: 5px;
+
+      &:first-child {
+        padding: 0;
+        margin: 0;
+        width: 29.6%;
+      }
+
+    }
+    p {
+      padding-right: 41px;
+    }
+
+  }
+  .closed-projects__pic {
+    margin: 0 0 35px;
+  }
+  .closed-projects__data {
+    margin: 0;
+
+    div {
+      padding: 25px 0;
+
+      span {
+        font-size: 24px;
+        line-height: 26px;
+      }
+
+    }
+
+  }
+  .closed-projects__title {
+    margin: 0 0 26px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+
+}
+
+

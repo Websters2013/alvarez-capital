@@ -1,0 +1,102 @@
+.location {
+  position: relative;
+  padding: 40px 0 0;
+  width: 100%;
+}
+.location__layout {
+  position: relative;
+  z-index: 1;
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.location__map {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.location__address {
+  margin: 0 0 40px;
+  font-size: 15px;
+  line-height: 20px;
+  @include main-font1();
+
+  address {
+    font-style: normal;
+
+    strong {
+      @include main-font4();
+    }
+    span {
+      display: block;
+    }
+    div {
+      margin: 0 0 20px;
+    }
+    a {
+      display: inline-block;
+      @include main-font4();
+      color: #e09f38;
+      border-bottom: 2px solid #e09f38;
+      -webkit-transition: border-bottom 0.3s ease;
+      transition: border-bottom 0.3s ease;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+
+    }
+
+  }
+
+}
+.location__title {
+  margin: 0 0 29px;
+  font-size: 30px;
+  line-height: 36px;
+  @include main-font1();
+}
+
+@media (min-width: $desktop) {
+
+  .location {
+    padding: 122px 0 133px;
+    background: #fff;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      content: '';
+      background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.01) 100%);
+      background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.01) 100%);
+      background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.01) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#03ffffff',GradientType=1 );
+      pointer-events: none;
+    }
+
+  }
+  .location__layout {
+    pointer-events: none;
+  }
+  .location__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .location__address {
+    display: inline-block;
+    margin: 0;
+    pointer-events: all;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+}
+
+

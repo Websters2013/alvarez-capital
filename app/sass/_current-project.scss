@@ -1,0 +1,253 @@
+.current-project {
+  width: 100%;
+  background: #f6f8fa;
+  padding: 50px 0;
+}
+.current-project__layout {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1210px;
+  margin: 0 auto;
+}
+.current-project__title {
+  margin: 0 0 26px;
+  @include main-font1();
+  font-size: 26px;
+  line-height: 30px;
+}
+.current-project__description {
+  margin: 0 0 55px;
+  @include main-font1();
+  font-size: 16px;
+  line-height: 26px;
+  text-align: justify;
+
+  p {
+    margin: 0 0 28px;
+  }
+
+}
+.current-project__info {
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.05);
+  text-align: center;
+
+  .btn {
+    max-width: 400px;
+  }
+
+}
+.current-project__data {
+  @include inline-flex();
+  @include flex-direction(row);
+  @include align-items(flex-start);
+  @include justify-content(space-between);
+  width: 100%;
+  padding: 27px 0;
+  border-top: 1px solid #dddddd;
+  @include main-font2();
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  >div {
+    width: 48%;
+    text-align: right;
+
+    &:first-child {
+      text-align: left;
+    }
+
+    span {
+      display: block;
+      font-size: 24px;
+      line-height: 26px;
+      @include main-font4();
+      text-transform: none;
+    }
+
+  }
+
+  &:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+}
+.current-project__status {
+  padding: 22px 0 0;
+  margin: 0 0 16px;
+  @include main-font1();
+  font-size: 18px;
+  line-height: 22px;
+
+  span {
+    @include main-font4();
+  }
+
+}
+.current-project__bar {
+  position: relative;
+  margin: 15px 0 15px;
+  height: 12px;
+  background: #eeeeee;
+}
+.current-project__bar-indicator {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #38e054;
+  box-shadow: 0 0 15px -5px rgba(56, 224, 84, 0.31);
+}
+.current-project__budget {
+
+  //@include inline-flex();
+  //@include flex-direction(row);
+  //@include flex-wrap(wrap);
+  //@include align-items(flex-start);
+  //@include justify-content(flex-start);
+  //width: 100%;
+  @include main-font2();
+  font-size: 12px;
+  line-height: 19px;
+  text-transform: uppercase;
+
+  >div {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 24px;
+    //width: 48%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    >span {
+      display: block;
+      font-size: 14px;
+      @include main-font4();
+      text-transform: none;
+    }
+
+  }
+
+}
+.current-project__text-title {
+  margin: 0 0 26px;
+  font-size: 30px;
+  line-height: 36px;
+  @include main-font1();
+
+  span {
+    @include main-font4();
+  }
+}
+.current-project__text {
+  margin: 0 0 40px;
+  font-size: 15px;
+  line-height: 26px;
+}
+.current-project__info_2 {
+  padding: 0 0 70px;
+  box-shadow: none;
+
+  >div {
+
+    &:first-child {
+      margin: 0 0 70px;
+    }
+
+  }
+  .btn {
+    margin-top: 24px;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .current-project {
+    padding: 80px 0;
+  }
+  .current-project__layout {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+
+    >div {
+      width: 48.6%;
+
+      &:first-child {
+        padding: 46px 0 0;
+        width: 40.5%;
+      }
+
+    }
+
+  }
+  .current-project__description {
+    margin: 0;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .current-project__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .current-project__info {
+    padding: 50px 50px;
+    text-align: left;
+
+    .btn {
+      max-width: 100%;
+    }
+
+  }
+  .current-project__text {
+    margin: 0 0 27px;
+  }
+  .current-project__info_2 {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+    padding: 70px 30px;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.05);
+
+    >div {
+      width: 45.8%;
+
+      &:first-child {
+        padding-top: 7px;
+        margin: 0;
+        width: 48.5%;
+      }
+
+    }
+    .single-gallery__container {
+      margin: 0 0 34px;
+    }
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .current-project {
+    padding: 120px 0 100px;
+  }
+  .current-project__info {
+    padding: 93px 99px 100px;
+  }
+  .current-project__info_2 {
+    padding: 53px 60px 41px;
+  }
+
+}
+
+

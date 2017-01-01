@@ -1,0 +1,59 @@
+.btn-status {
+  overflow: hidden;
+  @include inline-flex();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(center);
+  border: 2px solid #7dc72f;
+  min-width: 158px;
+  width: 100%;
+  height: 50px;
+  padding: 1px 24px 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: #7dc72f;
+  @include main-font8();
+  -webkit-transition: border 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition: border 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  svg {
+    display: inline-block;
+    margin: -3px 14px 0 -5px;
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    -webkit-transition: fill 0.3s ease;
+    transition: fill 0.3s ease;
+  }
+
+}
+.btn-status_open {
+  border-color: #e09f38;
+  color: #e09f38;
+  background: #fff;
+
+  svg {
+    fill: #e09f38;
+  }
+
+}
+.btn-status_expired {
+  border-color: #e63a2e;
+  color: #e63a2e;
+  background: #fff;
+
+  svg {
+    fill: #e63a2e;
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .btn-status {
+    height: 66px;
+  }
+
+}

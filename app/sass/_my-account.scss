@@ -1,0 +1,196 @@
+.my-account {
+  width: 100%;
+  //max-width: 500px;
+  //padding: 0 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.my-account__head {
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  margin: 0 0 30px 0;
+}
+.my-account__pic {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: 0 0 28px 0;
+  border-radius: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+.my-account__name {
+  padding-top: 3px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 21px;
+  @include main-font1();
+  text-align: center;
+
+  span {
+    display: block;
+    font-size: 30px;
+    line-height: 34px;
+    @include main-font4();
+  }
+
+}
+.my-account__menu {
+  text-align: center;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+
+  a {
+    display: block;
+    padding: 15px 20px;
+    color: #29251e;
+    font-size: 16px;
+    line-height: 20px;
+    border-top: 1px solid #dedede;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &.active,
+    &:hover {
+      color: #e09f38;
+
+      svg {
+        fill: #e09f38;
+      }
+
+    }
+    &.active {
+      cursor: default;
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: top;
+      width: 23px;
+      margin: -2px 10px 0 0;
+      -webkit-transition: fill 0.3s ease;
+      transition: fill 0.3s ease;
+    }
+
+  }
+
+}
+.my-account__settings {
+
+  .access-system__form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+}
+.my-account__content {
+  padding: 50px 20px 0;
+}
+
+@media (min-width: $desktop) {
+
+  .my-account {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 38.7%;
+      height: 100%;
+      width: 1px;
+      background: #dedede;
+      content: '';
+    }
+
+    >div {
+      width: 54.5%;
+      padding: 0;
+      border-top: none;
+      text-align: left;
+
+      &:first-child {
+        width: 38.7%;
+        text-align: right;
+      }
+
+    }
+
+  }
+  .my-account__head {
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    margin: 0 0 77px 0;
+  }
+  .my-account__pic {
+    margin: 0 28px 0 0;
+  }
+  .my-account__name {
+    width: calc( 100% - 180px );
+    text-align: left;
+  }
+  .my-account__controls {
+    display: inline-block;
+    width: 100%;
+    max-width: 368px;
+    padding-top: 6px;
+  }
+  .my-account__menu {
+    text-align: left;
+    border-top: none;
+    border-bottom: none;
+
+    a {
+      padding: 20px 0;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+  }
+  .my-account__content {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+  }
+  .my-account__settings {
+    max-width: 673px;
+
+    .access-system__form {
+      max-width: 100%;
+      margin: 0;
+    }
+
+  }
+  .my-account__dashboard {
+
+    .site__title {
+      margin-bottom: 48px;
+    }
+
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .my-account {
+    padding-top: 111px;
+    padding-bottom: 111px;
+  }
+
+}
+
+

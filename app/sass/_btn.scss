@@ -1,0 +1,255 @@
+.btn {
+  overflow: hidden;
+  @include inline-flex();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(center);
+  border: none;
+  min-width: 158px;
+  height: 40px;
+  padding: 1px 24px 0;
+  color: #fff;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: center;
+  background: rgba(41, 37, 30, 1);
+  @include main-font4();
+  -webkit-transition: border 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition: border 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 0 15px 2px rgba(224, 159, 56, 0.34);
+
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e09f38;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  &:hover {
+    color: #fff;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.3);
+    //background: #000;
+    //-webkit-transition: background 0s ease 0.3s, color 0.3s ease;
+    //transition: background 0s ease 0.3s, color 0.3s ease;
+
+    &:before {
+      -webkit-transform: scaleY(0);
+      transform: scaleY(0);
+    }
+  }
+  &:active {
+    //background: #464646;
+
+    &:before {
+      background: #000;
+    }
+  }
+
+  svg {
+    display: inline-block;
+    margin: -3px 14px 0 -5px;
+    width: 30px;
+    height: 30px;
+    -webkit-transition: fill 0.3s ease;
+    transition: fill 0.3s ease;
+  }
+
+}
+.btn_full {
+  width: 100%;
+}
+.btn_2 {
+  vertical-align: middle;
+  width: 215px;
+  height: 55px;
+  border-radius: 55px;
+  border: 2px solid #fff;
+  box-shadow: none;
+  background: #fff;
+  color: #29251e;
+
+  &:before {
+    display: none;
+  }
+  &:hover {
+    color: #fff;
+    background: #e09f38;
+    box-shadow: none;
+  }
+  &:active {
+    background: #c78a34;
+  }
+
+
+}
+.btn_3 {
+  vertical-align: middle;
+  min-width: 280px;
+  height: 55px;
+  border-radius: 55px;
+  border: 2px solid #fff;
+  box-shadow: none;
+  background: transparent;
+  color: #fff;
+
+  &:before {
+    display: none;
+  }
+  &:hover {
+    color: #fff;
+    border-color: #e09f38;
+    background: #e09f38;
+    box-shadow: none;
+  }
+  &:active {
+    color: #29251e;
+    border-color: #fff;
+    background: #fff;
+  }
+
+
+}
+.btn_4 {
+  vertical-align: middle;
+  min-width: 215px;
+  height: 55px;
+  border-radius: 55px;
+  border: 2px solid #e09f38;
+  box-shadow: none;
+  background: #fff;
+  color: #29251e;
+  font-size: 13px;
+  line-height: 13px;
+
+  &:before {
+    display: none;
+  }
+  &:hover {
+    color: #fff;
+    background: #e09f38;
+    border-color: #e09f38;
+    box-shadow: 0 3px 10px 2px rgba(224, 159, 56, 0.34);
+  }
+  &:active {
+    background: #c78a34;
+    border-color: #c78a34;
+  }
+
+
+}
+button.btn {
+
+  >span {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+.btn_play {
+
+  svg {
+    fill: #e2a544;
+  }
+
+  &:hover {
+
+    svg {
+      fill: #fff;
+    }
+
+  }
+  &:active {
+
+    svg {
+      fill: #fff;
+    }
+
+  }
+
+
+}
+.btn_discover {
+
+  svg {
+    fill: #fff;
+  }
+
+  &:hover {
+
+    svg {
+      fill: #fff;
+    }
+
+  }
+  &:active {
+
+    svg {
+      fill: #29251e;
+    }
+
+  }
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .btn {
+    height: 61px;
+  }
+  .btn_2 {
+    height: 55px;
+    width: 200px;
+    border: 2px solid #e09f38;
+    box-shadow: none;
+    background: #fff;
+    color: #29251e;
+
+    &:hover {
+      color: #fff;
+      background: #e09f38;
+      border-color: #e09f38;
+      box-shadow: 0 3px 10px 2px rgba(224, 159, 56, 0.34);
+    }
+    &:active {
+      background: #c78a34;
+      border-color: #c78a34;
+    }
+
+
+  }
+  .btn_3 {
+    height: 55px;
+  }
+  .btn_4 {
+    height: 55px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .btn_2 {
+    width: 215px;
+  }
+
+}

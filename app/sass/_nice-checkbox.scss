@@ -1,0 +1,60 @@
+.nice-checkbox {
+  display: inline-block;
+  vertical-align: top;
+  user-select: none;
+
+  input[ type = checkbox ] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+
+    &:checked + label {
+      color: rgba(41, 37, 30, 1);
+
+      &:before {
+        background: #e09f38;
+      }
+
+    }
+
+    &:disabled + label {
+      cursor: default;
+      opacity: .5;
+    }
+
+  }
+  label {
+    position: relative;
+    height: 20px;
+    padding-left: 40px;
+    color: rgba(41, 37, 30, 0.4);
+    font-size: 13px;
+    line-height: 15px;
+    cursor: pointer;
+    @include main-font3();
+
+    &:after,
+    &:before {
+      position: absolute;
+      content: '';
+    }
+
+    &:after {
+      top: 0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #dddddd;
+    }
+
+    &:before {
+      top: 5px;
+      left: 5px;
+      background: #dddddd;
+      width: 6px;
+      height: 6px;
+      content: '';
+    }
+
+  }
+
+}

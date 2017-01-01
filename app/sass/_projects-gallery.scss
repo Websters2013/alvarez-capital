@@ -1,0 +1,240 @@
+.projects-gallery {
+  position: relative;
+  margin: 0 -20px;
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    width: 100%;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    z-index: 3;
+    top: 300px;
+    left: -5px;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    background: transparent;
+    text-indent: -9999px;
+    border: none;
+
+    &:after {
+      position: absolute;
+      top: 24%;
+      left: 75%;
+      width: 47%;
+      height: 47%;
+      border-top: 3px solid #e09f38;
+      border-left: 3px solid #e09f38;
+      -webkit-transform: rotate(-45deg) translateY(-50%) translateX(-50%);
+      transform: rotate(-45deg) translateY(-50%) translateX(-50%);
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      content: '';
+      -webkit-transition: border 0.3s ease;
+      transition: border 0.3s ease;
+    }
+
+    &:hover {
+
+      &:after {
+        border-top-color: #000;
+        border-left-color: #000;
+      }
+
+    }
+
+  }
+  .swiper-button-next {
+    left: auto;
+    right: -5px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+
+}
+.projects-gallery__slide {
+  position: relative;
+  padding: 70px 25px 50px;
+  background: #fff;
+}
+.projects-gallery__pic {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  left: -1px;
+  height: 267px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.projects-gallery__content {
+  position: relative;
+  padding: 30px 20px 0;
+  background: #fff;
+  font-size: 13px;
+  line-height: 20px;
+
+  .btn {
+    margin-top: 32px;
+  }
+
+}
+.projects-gallery__head {
+  margin: 0 0 34px;
+}
+.projects-gallery__title {
+  margin: 0 0 20px;
+  font-size: 30px;
+  line-height: 34px;
+  @include main-font1();
+
+  span {
+    @include main-font4();
+  }
+
+}
+.projects-gallery__info {
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+.projects-gallery__price {
+  display: block;
+  font-size: 18px;
+  line-height: 27px;
+  @include main-font4();
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .projects-gallery__slide {
+    padding: 152px 39px 60px;
+  }
+  .projects-gallery__content {
+    padding: 54px 57px 0;
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .projects-gallery__head {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+  }
+  .projects-gallery__title {
+    width: 50%;
+    margin: 0;
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .projects-gallery__info {
+    width: 50%;
+    padding: 2px 4px 0 0;
+    text-align: right;
+  }
+
+}
+@media (min-width: $desktop) {
+
+  .projects-gallery {
+    margin: 0;
+
+    &:after {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      content: '';
+      background: -moz-linear-gradient(left,  rgba(255,255,255,0.01) 0%, rgba(255,255,255,1) 100%);
+      background: -webkit-linear-gradient(left,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 100%);
+      background: linear-gradient(to right,  rgba(255,255,255,0.01) 0%,rgba(255,255,255,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03ffffff', endColorstr='#ffffff',GradientType=1 );
+    }
+
+    .swiper-slide {
+      width: 64%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 306px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+    }
+    .swiper-button-next {
+      left: auto;
+      right: 0;
+    }
+
+  }
+  .projects-gallery__slide {
+    padding: 100px 30px 60px;
+
+  }
+  .projects-gallery__content {
+    padding: 41px 30px 0;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .projects-gallery__title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .projects-gallery__info {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .projects-gallery__price {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .projects-gallery {
+
+    .swiper-slide {
+      width: 64%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      left: 45px;
+    }
+    .swiper-button-next {
+      left: auto;
+      right: 45px;
+    }
+
+  }
+  .projects-gallery__slide {
+    padding: 152px 39px 60px;
+  }
+  .projects-gallery__content {
+    padding: 54px 57px 0;
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .projects-gallery__title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .projects-gallery__info {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .projects-gallery__price {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+}
+
+

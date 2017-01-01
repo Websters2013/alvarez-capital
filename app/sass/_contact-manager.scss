@@ -1,0 +1,61 @@
+.contact-manager {
+  position: relative;
+  width: 100%;
+  padding: 55px 0 55px;
+  text-align: center;
+}
+.contact-manager__layout {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.contact-manager__title {
+  margin: 0 0 25px;
+  font-size: 30px;
+  line-height: 36px;
+  @include main-font1();
+
+  span {
+    @include main-font4();
+  }
+
+}
+.contact-manager__mail {
+  display: inline-block;
+  padding-bottom: 3px;
+  margin: 0 28px 10px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #e09f38;
+  border-bottom: 2px solid #e09f38;
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+
+}
+.contact-manager__phone {
+  display: inline-block;
+  margin: 0 28px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #29251e;
+  cursor: default;
+}
+
+@media (min-width: $desktop) {
+
+  .contact-manager {
+    padding: 74px 0 70px;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+
+
+}
+
+

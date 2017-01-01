@@ -1,0 +1,66 @@
+.hero {
+  @include inline-flex();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  @include justify-content(center);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+.hero_2 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.hero__inner {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 70px;
+  background: #fff;
+}
+.hero__title {
+  padding: 0 20px;
+  color: #fff;
+  font-size: 40px;
+  line-height: 46px;
+  @include main-font1();
+  text-align: center;
+
+  span {
+    @include main-font4();
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .hero {
+    min-height: 400px;
+    padding: 70px 40px;
+  }
+  .hero__inner {
+    padding: 0;
+    background: transparent;
+  }
+  .hero__title {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .hero {
+    min-height: 520px;
+    padding: 123px 40px 120px;
+  }
+
+}
+
+

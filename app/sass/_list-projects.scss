@@ -1,0 +1,64 @@
+.list-projects {
+  position: relative;
+  padding: 40px 0 60px;
+  width: 100%;
+  text-align: center;
+
+  .btn {
+    min-width: 272px;
+  }
+
+}
+.list-projects__layout {
+  position: relative;
+  z-index: 1;
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: $desktop) {
+
+  .list-projects {
+    padding: 87px 0 79px;
+    text-align: left;
+
+    .site__title3 {
+      margin: 0;
+      text-align: left;
+    }
+
+  }
+  .list-projects__layout {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(space-between);
+
+    div {
+      width: 30%;
+      text-align: right;
+
+      &:first-child {
+        width: 70%;
+        text-align: left;
+      }
+
+    }
+
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .list-projects {
+
+    .site__title3 {
+      margin: 0;
+    }
+
+  }
+
+}
+
+

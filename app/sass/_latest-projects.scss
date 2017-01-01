@@ -1,0 +1,243 @@
+.latest-projects {
+  width: 100%;
+  padding: 80px 0 50px;
+  background: #f7f8fa;
+  text-align: center;
+}
+.latest-projects__layout {
+  position: relative;
+  width: 100%;
+  max-width: 1242px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.latest-projects__title {
+  margin: 0 0 45px 0;
+  font-size: 28px;
+  line-height: 34px;
+  @include main-font6();
+  letter-spacing: 2px;
+}
+.latest-projects__all {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 20px;
+  padding: 0 16px 2px 0;
+  color: #8f8d8b;
+  font-size: 15px;
+  line-height: 18px;
+  @include main-font2();
+
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #e09f38;
+    content: '';
+    -webkit-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+  }
+  &:after {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #d5d3d0;
+    border-left: 1px solid #d5d3d0;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease;
+    content: '';
+  }
+  &:hover {
+
+    &:before {
+      width: calc(100% - 16px);
+    }
+    &:after {
+      border-color: #e09f38;
+    }
+
+  }
+
+}
+.latest-projects__wrap {
+  text-align: center;
+}
+.latest-projects__item {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  max-width: 370px;
+  padding: 280px 30px 30px;
+  margin: 0 0 30px;
+  background: #fff;
+  border-radius: 6px;
+  color: #29251e;
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.1);
+  -webkit-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+
+  &:hover {
+    box-shadow: 0 0 35px 0 rgba(0,0,0,0.2);
+
+    .latest-projects__pic {
+      width: 103%;
+
+      &:before {
+        opacity: 1;
+      }
+
+    }
+
+  }
+
+}
+.latest-projects__pic {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+
+  &:before {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    content: '';
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+
+}
+.latest-projects__name {
+  margin: 0 0 30px;
+  font-size: 18px;
+  line-height: 21px;
+  @include main-font8();
+
+  span {
+    display: block;
+    font-size: 30px;
+    line-height: 32px;
+    @include main-font7();
+  }
+
+}
+.latest-projects__data {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  @include align-items(flex-start);
+  @include justify-content(flex-start);
+  margin: 0 0 32px;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  @include main-font8();
+
+  >div {
+    width: 33.333%;
+    padding: 0 5px;
+
+    >span {
+      display: block;
+      font-size: 18px;
+      line-height: 25px;
+      @include main-font7();
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .latest-projects__item {
+    padding: 328px 30px 30px;
+  }
+  .latest-projects__data {
+
+    >div {
+      width: 29.5%;
+      text-align: right;
+      padding: 0;
+
+      &:first-child {
+        width: 41%;
+        text-align: left;
+      }
+
+    }
+
+  }
+  .latest-projects__pic {
+    height: 300px;
+  }
+
+}
+@media (min-width: $desktop) {
+
+  .latest-projects {
+    padding: 117px 0 120px;
+    text-align: left;
+  }
+  .latest-projects__wrap {
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+
+    >div {
+      width: 33.333%;
+      padding: 0 10px;
+    }
+  }
+  .latest-projects__title {
+    margin: 0 0 65px 15px;
+    font-size: 28px;
+    line-height: 34px;
+    @include main-font6();
+    letter-spacing: 2px;
+  }
+  .latest-projects__item {
+    text-align: left;
+  }
+  .latest-projects__all {
+    position: absolute;
+    top: 9px;
+    right: 46px;
+    margin: 0;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .latest-projects__wrap {
+
+    >div {
+      padding: 0 15px;
+    }
+  }
+
+}
+
+

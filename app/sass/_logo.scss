@@ -1,0 +1,63 @@
+.logo {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 20px;
+  width: 210px;
+  height: 31px;
+  -webkit-transform: translateY(-50%) translateZ(0);
+  transform: translateY(-50%) translateZ(0);
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  >img,
+  >svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .logo__fixed {
+    display: none;
+  }
+
+}
+
+.site__header_fixed {
+
+  .logo {
+
+    .logo__normal {
+      display: none;
+    }
+    .logo__fixed {
+      display: block;
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .logo {
+    z-index: 7;
+    width: 280px;
+    height: 41px;
+    top: 50%;
+    left: 20px;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .logo {
+    width: 329px;
+    height: 49px;
+  }
+
+}
+
+
