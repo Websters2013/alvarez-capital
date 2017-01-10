@@ -65,6 +65,7 @@
 
   svg {
     display: inline-block;
+    vertical-align: middle;
     margin: -3px 14px 0 -5px;
     width: 30px;
     height: 30px;
@@ -207,6 +208,16 @@ button.btn {
 
   }
 
+
+}
+.btn_send {
+
+  svg {
+    width: 30px;
+    height: 32px;
+    margin: -3px -5px 0 14px;
+    fill: #fff;
+  }
 
 }
 

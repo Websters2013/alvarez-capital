@@ -369,6 +369,12 @@ input[type="number"].site__input::-webkit-inner-spin-button {
   }
 
 }
+.site__title_4 {
+  padding-top: 0;
+  margin: 0 0 20px;
+  font-size: 22px;
+  line-height: 30px;
+}
 .site__subtitle {
   display: block;
   margin: 0 0 54px;
@@ -734,6 +740,11 @@ input[type="number"].site__input::-webkit-inner-spin-button {
       font-size: 36px;
       line-height: 40px;
     }
+  }
+  .site__title_4 {
+    margin: 0 0 25px;
+    font-size: 30px;
+    line-height: 38px;
   }
   .site__title3 {
     margin: 0 0 79px;

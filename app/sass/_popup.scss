@@ -183,6 +183,21 @@
   }
 
 }
+.invest-project {
+  width: 280px;
+  padding: 30px 20px;
+  background: #fff;
+  color: #29251e;
+  font-size: 14px;
+  line-height: 24px;
+  @include main-font1();
+
+  p {
+    margin: 0 0 52px;
+    text-align: justify;
+  }
+
+}
 
 @media (min-width: $phone-landscape) {
 
@@ -191,6 +206,10 @@
     height: 380px;
 
   }
+  .invest-project {
+    padding: 40px 40px;
+    width: 440px;
+  }
 
 }
 @media (min-width: $tablet-portrait) {
@@ -198,6 +217,10 @@
   .video-popup {
     width: 740px;
     height: 580px;
+  }
+  .invest-project {
+    width: 570px;
+    padding: 50px 50px;
   }
 
 }
@@ -234,6 +257,11 @@
       transform: scale( -1, 1 ) translateY(-50%);
     }
 
+  }
+  .invest-project {
+    padding: 72px 100px 81px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
 }

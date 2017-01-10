@@ -30,7 +30,8 @@ var paths = {
         {
             dist: 'login-subscribe.min.js',
             contains: [
-                'app/js/jquery.main.js'
+                'app/js/jquery.main.js',
+                'app/js/jquery.form.validator.js'
             ]
         },
         {
@@ -49,7 +50,8 @@ var paths = {
                 'app/js/jquery.price-range.js',
                 'app/js/jquery.calculate.js',
                 'app/js/jquery.popup.js',
-                'app/js/jquery.percentage.js'
+                'app/js/jquery.percentage.js',
+                'app/js/jquery.form.validator.js'
             ]
         },
         {
