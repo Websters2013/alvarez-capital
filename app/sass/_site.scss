@@ -341,6 +341,10 @@ input[type="number"].site__input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+textarea.site__input {
+  display: block;
+  height: 150px;
+}
 .site__title {
   position: relative;
   padding-top: 25px;
@@ -727,6 +731,10 @@ input[type="number"].site__input::-webkit-inner-spin-button {
   input[type="number"].site__input {
     height: 61px;
     padding: 17px 30px;
+  }
+  textarea.site__input {
+    height: 220px;
+    padding: 23px 30px;
   }
   .site__title {
     margin: 0 0 52px;

@@ -76,6 +76,13 @@ var paths = {
             contains: [
                 'app/js/jquery.tabs.js'
             ]
+        },
+        {
+            dist: 'propose-project.min.js',
+            contains: [
+                'app/js/jquery.main.js',
+                'app/js/jquery.form.validator.js'
+            ]
         }
     ],
     vendorScripts: 'app/js/vendors/**/*.js',

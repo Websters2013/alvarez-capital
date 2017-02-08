@@ -1,0 +1,107 @@
+.propose-project {
+  width: 100%;
+  max-width: 500px;
+  padding: 0 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../img/propose-bg.jpg') no-repeat;
+    background-size: cover;
+    content: '';
+  }
+
+  >div {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid #dedede;
+    padding: 40px 0 0;
+
+    &:first-child {
+      border-top: none;
+      padding: 0 0 40px;
+    }
+
+  }
+
+}
+.propose-project__list {
+  @include main-font5();
+
+  li {
+    position: relative;
+    padding: 0 0 0 39px;
+    margin: 0 0 17px;
+    font-size: 20px;
+    line-height: 23px;
+
+    &:after {
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      width: 23px;
+      height: 23px;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiPiAgICA8cGF0aCBmaWxsPSIjZTA5ZjM4IiBzdHlsZT0idGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O2xpbmUtaGVpZ2h0Om5vcm1hbDt0ZXh0LXRyYW5zZm9ybTpub25lO2Jsb2NrLXByb2dyZXNzaW9uOnRiOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246Qml0c3RyZWFtIFZlcmEgU2FucyIgZD0iTSAxMiAyIEMgNi41IDIgMiA2LjUgMiAxMiBDIDIgMTcuNSA2LjUgMjIgMTIgMjIgQyAxNy4yIDIyIDIxLjQwNjI1IDE4LjEgMjEuOTA2MjUgMTMgTCAxOS45MDYyNSAxMyBDIDE5LjQwNjI1IDE2LjkgMTYgMjAgMTIgMjAgQyA3LjYgMjAgNCAxNi40IDQgMTIgQyA0IDcuNiA3LjYgNCAxMiA0IEMgMTMuNCA0IDE0LjcwNjI1IDQuNCAxNS45MDYyNSA1IEwgMTcuNDA2MjUgMy41IEMgMTUuODA2MjUgMi42IDE0IDIgMTIgMiB6IE0gMjAuNSA0Ljg3NSBMIDExLjE4NzUgMTMuNzgxMjUgTCA3LjUgMTAuMDkzNzUgTCA2LjA5Mzc1IDExLjUgTCAxMC41IDE1LjkwNjI1IEwgMTEuMTg3NSAxNi41OTM3NSBMIDExLjkwNjI1IDE1LjkwNjI1IEwgMjEuOTA2MjUgNi4zMTI1IEwgMjAuNSA0Ljg3NSB6IiBjb2xvcj0iIzAwMCIgb3ZlcmZsb3c9InZpc2libGUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJhY2N1bXVsYXRlIiBmb250LWZhbWlseT0iQml0c3RyZWFtIFZlcmEgU2FucyI+PC9wYXRoPjwvc3ZnPg==);
+      background-size: contain;
+      content: '';
+    }
+  }
+
+}
+.propose-project__text {
+
+  svg {
+    width: 99px;
+    margin: 0 0 42px 0;
+  }
+
+}
+
+@media (min-width: $phone-landscape) {
+
+
+
+}
+@media (min-width: $desktop) {
+
+  .propose-project {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(space-between);
+    max-width: 1210px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    >div {
+      width: 31.5%;
+      padding: 0;
+      border-top: none;
+
+      &:first-child {
+        width: 50%;
+      }
+
+    }
+
+  }
+  .propose-project__text {
+    padding-top: 50px;
+  }
+
+}
+@media (min-width: $desktop-wide) {
+
+  .propose-project {
+    padding-top: 70px;
+    padding-bottom: 102px;
+  }
+
+}
+
+
